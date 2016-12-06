@@ -58,11 +58,11 @@ module.exports = function(environment) {
       providers: {
         'vk-oauth2': {
           clientId: 5763554,
-          redirectUri: 'https://enniel.github.io/torii-vk'
+          redirectUri: 'https://enniel.github.io/torii-vk/'
         },
         'vk-oauth2-bearer': {
           clientId: 5763554,
-          redirectUri: 'https://enniel.github.io/torii-vk'
+          redirectUri: 'https://enniel.github.io/torii-vk/'
         }
       }
     };
