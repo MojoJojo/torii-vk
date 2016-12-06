@@ -7,7 +7,9 @@ export default Oauth2.extend(QueryString, {
   baseUrl: 'https://oauth.vk.com/authorize',
   optionalUrlParams: ['display', 'v'],
   responseParams: ['code', 'state'],
-  scope: configurable('scope'),
+  scope: configurable('scope', function() {
+    return this._super();
+  }),
   display: configurable('display', 'popup'),
   v: configurable('v', '5.60'),
   redirectUri: configurable('redirectUri', function() {
