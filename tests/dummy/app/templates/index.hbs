@@ -1,0 +1,12 @@
+<div>
+  Auth data: {{#if authData}}
+    <pre>{{inspect-object authData}}</pre>
+  {{/if}}
+</div>
+
+<div>
+  Error data: {{inspect-object error}}
+</div>
+
+<button {{action 'authenticate' 'vk-oauth2-bearer'}}>Implicit Flow</button>
+<button {{action 'authenticate' 'vk-oauth2'}}>Authorization code flow</button>

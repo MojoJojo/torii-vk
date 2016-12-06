@@ -25,10 +25,12 @@ module.exports = function(environment) {
     torii: {
       providers: {
         'vk-oauth2': {
-          clientId: 5762177
+          clientId: 5762177,
+          redirectUri: 'http://localhost:4200/blank.html'
         },
         'vk-oauth2-bearer': {
-          clientId: 5762177
+          clientId: 5762177,
+          redirectUri: 'http://localhost:4200/blank.html'
         }
       }
     }
@@ -58,11 +60,11 @@ module.exports = function(environment) {
       providers: {
         'vk-oauth2': {
           clientId: 5763554,
-          redirectUri: 'https://enniel.github.io/torii-vk/'
+          redirectUri: 'https://enniel.github.io/torii-vk/blank.html'
         },
         'vk-oauth2-bearer': {
           clientId: 5763554,
-          redirectUri: 'https://enniel.github.io/torii-vk/'
+          redirectUri: 'https://enniel.github.io/torii-vk/blank.html'
         }
       }
     };
