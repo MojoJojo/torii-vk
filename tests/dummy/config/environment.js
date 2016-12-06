@@ -20,6 +20,19 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    torii: {
+      providers: {
+        'vk-oauth2': {
+          clientId: 5762177,
+          scope: 'friends'
+        },
+        'vk-oauth2-bearer': {
+          clientId: 5762177,
+          scope: 'friends'
+        }
+      }
     }
   };
 
