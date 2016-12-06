@@ -1,17 +1,29 @@
 {
   "name": "torii-vk",
   "version": "0.0.2",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Provider for authentication on vk.com using torii.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "torii",
+    "vkontakte",
+    "vk.com",
+    "vk"
   ],
   "license": "MIT",
-  "author": "",
+  "author": {
+    "name": "Evgeny Razumov (Enniel)",
+    "email": "razumov.evgeni@gmail.com"
+  },
   "directories": {
-    "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "bugs": {
+    "url": "https://github.com/enniel/torii-vk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/enniel/torii-vk.git"
+  },
   "scripts": {
     "build": "ember build",
     "start": "ember server",
