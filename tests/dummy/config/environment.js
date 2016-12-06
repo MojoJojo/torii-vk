@@ -66,6 +66,7 @@ module.exports = function(environment) {
         }
       }
     };
+    ENV['rootURL'] = '/torii-vk';
   }
 
   return ENV;
