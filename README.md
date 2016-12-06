@@ -1,27 +1,62 @@
-# torii-vk
+# Torii VK
 
-This README outlines the details of collaborating on this Ember addon.
+Provider for authentication on [vk.com](https://vk.com) using [Torii](https://github.com/Vestorly/torii).
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd torii-vk`
-* `npm install`
-* `bower install`
+```sh
+npm i torii-vk --save-dev
+```
 
-## Running
+## Using
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+To use this addon you must [create app](https://vk.com/editapp?act=create).
+And add `clientId` in environment file.
 
-## Running Tests
+```js
+...
+  ENV['torii'] = {
+    providers: {
+      'vk-oauth2': {
+        clientId: <clientId>
+      },
+      'vk-oauth2-bearer': {
+        clientId: <clientId>
+      }
+    }
+  }
+...
+```
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+Add the action in the route:
 
-## Building
+```js
+...
+  actions: {
+    authenticate(provider) {
+      this.get('torii').open(provider).then(authData => {
+        //Your code
+      }, error => {
+        //Your code
+      });
+    }
+  }
+...
+```
 
-* `ember build`
+In template:
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+```hbs
+...
+  <button {{action 'authenticate' 'vk-oauth2-bearer'}}>
+    Implicit Flow
+  </button>
+  <button {{action 'authenticate' 'vk-oauth2'}}>
+    Authorization code flow
+  </button>
+...
+```
+
+## Support
+
+Having trouble? Open an issue!
