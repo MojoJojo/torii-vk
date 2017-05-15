@@ -1,5 +1,7 @@
 # Torii VK
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/enniel/torii-vk.svg)](https://greenkeeper.io/)
+
 Provider for authentication on [vk.com](https://vk.com) using [Torii](https://github.com/Vestorly/torii).
 
 ## Installation
